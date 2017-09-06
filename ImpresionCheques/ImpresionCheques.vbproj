@@ -1,0 +1,223 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{57FACAC4-7CA0-44ED-8D79-40B82758F48B}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <StartupObject>ImpresionCheques.My.MyApplication</StartupObject>
+    <RootNamespace>ImpresionCheques</RootNamespace>
+    <AssemblyName>ImpresionCheques</AssemblyName>
+    <FileAlignment>512</FileAlignment>
+    <MyType>WindowsForms</MyType>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DocumentationFile>ImpresionCheques.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DocumentationFile>ImpresionCheques.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionExplicit>On</OptionExplicit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionCompare>Binary</OptionCompare>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionStrict>Off</OptionStrict>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionInfer>On</OptionInfer>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationManifest>My Project\app.manifest</ApplicationManifest>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Bunifu_UI_v1.5.3, Version=1.5.3.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Program Files (x86)\Bunifu Technologies\Bunifu DataViz Manager\Bunifu_UI_v1.5.3.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+  </ItemGroup>
+  <ItemGroup>
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="System" />
+    <Import Include="System.Collections" />
+    <Import Include="System.Collections.Generic" />
+    <Import Include="System.Data" />
+    <Import Include="System.Drawing" />
+    <Import Include="System.Diagnostics" />
+    <Import Include="System.Windows.Forms" />
+    <Import Include="System.Linq" />
+    <Import Include="System.Xml.Linq" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ACCESOS\bancoAcceso.vb" />
+    <Compile Include="ACCESOS\chequeAcceso.vb" />
+    <Compile Include="ACCESOS\configuracionAcceso.vb" />
+    <Compile Include="ACCESOS\cuentaAcceso.vb" />
+    <Compile Include="ACCESOS\proveedorAcceso.vb" />
+    <Compile Include="APLICACION\Banco_detalle.Designer.vb">
+      <DependentUpon>Banco_detalle.vb</DependentUpon>
+    </Compile>
+    <Compile Include="APLICACION\Banco_detalle.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="APLICACION\Cheque_detalle.Designer.vb">
+      <DependentUpon>Cheque_detalle.vb</DependentUpon>
+    </Compile>
+    <Compile Include="APLICACION\Cheque_detalle.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="APLICACION\Lista_Bancos_UC.Designer.vb">
+      <DependentUpon>Lista_Bancos_UC.vb</DependentUpon>
+    </Compile>
+    <Compile Include="APLICACION\Lista_Bancos_UC.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="APLICACION\Lista_Cheques_UC.Designer.vb">
+      <DependentUpon>Lista_Cheques_UC.vb</DependentUpon>
+    </Compile>
+    <Compile Include="APLICACION\Lista_Cheques_UC.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="APLICACION\Test.Designer.vb">
+      <DependentUpon>Test.vb</DependentUpon>
+    </Compile>
+    <Compile Include="APLICACION\Test.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AUXILIAR\mensaje_Frm.Designer.vb">
+      <DependentUpon>Mensaje_Frm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="AUXILIAR\Mensaje_Frm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="APLICACION\Main.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="APLICACION\Main.Designer.vb">
+      <DependentUpon>Main.vb</DependentUpon>
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AUXILIAR\pregunta_Frm.Designer.vb">
+      <DependentUpon>pregunta_Frm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="AUXILIAR\pregunta_Frm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MODELO\banco.vb" />
+    <Compile Include="MODELO\cheque.vb" />
+    <Compile Include="MODELO\CONFIGURACION.vb" />
+    <Compile Include="MODELO\cuenta.vb" />
+    <Compile Include="MODELO\proveedor.vb" />
+    <Compile Include="MODULOS\modAccessOLEDBConnection.vb" />
+    <Compile Include="MODULOS\modAuxiliaryFunctions.vb" />
+    <Compile Include="MODULOS\modConfiguracion.vb" />
+    <Compile Include="MODULOS\modErrorsHandlingAndSendComments.vb" />
+    <Compile Include="MODULOS\modLogManager.vb" />
+    <Compile Include="MODULOS\modMail.vb" />
+    <Compile Include="MODULOS\modRegistryManager.vb" />
+    <Compile Include="MODULOS\modSystemInformation.vb" />
+    <Compile Include="MODULOS\modTextFileAccess.vb" />
+    <Compile Include="MODULOS\modTracking.vb" />
+    <Compile Include="MODULOS\modUI.vb" />
+    <Compile Include="MODULOS\modVariablesConstantes.vb" />
+    <Compile Include="MODULOS\modXMLSerialization.vb" />
+    <Compile Include="Mod_Print.vb" />
+    <Compile Include="My Project\AssemblyInfo.vb" />
+    <Compile Include="My Project\Application.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Application.myapp</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Resources.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Settings.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="APLICACION\Banco_detalle.resx">
+      <DependentUpon>Banco_detalle.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="APLICACION\Cheque_detalle.resx">
+      <DependentUpon>Cheque_detalle.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="APLICACION\Lista_Bancos_UC.resx">
+      <DependentUpon>Lista_Bancos_UC.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="APLICACION\Lista_Cheques_UC.resx">
+      <DependentUpon>Lista_Cheques_UC.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="APLICACION\Test.resx">
+      <DependentUpon>Test.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AUXILIAR\mensaje_Frm.resx">
+      <DependentUpon>Mensaje_Frm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="APLICACION\Main.resx">
+      <DependentUpon>Main.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AUXILIAR\pregunta_Frm.resx">
+      <DependentUpon>pregunta_Frm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="My Project\Resources.resx">
+      <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="My Project\app.manifest" />
+    <None Include="My Project\Application.myapp">
+      <Generator>MyApplicationCodeGenerator</Generator>
+      <LastGenOutput>Application.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="My Project\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <CustomToolNamespace>My</CustomToolNamespace>
+      <LastGenOutput>Settings.Designer.vb</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="IMAGENES\Print_64px.png" />
+    <None Include="IMAGENES\Print_96px.png" />
+    <None Include="IMAGENES\Check Book_96px.png" />
+    <None Include="IMAGENES\Collaborator Male_96px_selected.png" />
+    <None Include="IMAGENES\imprimir.ico" />
+    <None Include="IMAGENES\Help_96px.png" />
+    <Content Include="IMAGENES\Print_32px.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
+</Project>
